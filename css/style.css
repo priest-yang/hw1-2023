@@ -15,7 +15,10 @@ h1{
 	background: white;
     text-transform: uppercase;
 	text-align: center;
+	font-size: larger;
 }
+
+
 
 .active a{
 	text-decoration: none;;
@@ -65,3 +68,79 @@ nav ul li{
 /*Added this so the links stay the same color*/
 a:visited{color:#0000FF}
 
+nav a{
+	color: black;
+	font-weight: bold;
+	text-decoration: none; 
+  }
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+  }
+
+  nav a:hover, nav a:focus{
+	text-decoration: underline;
+  }
+  
+  
+  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+  .skip a{
+	position: absolute;
+	top: -40px;
+  }
+  .skip a:focus{
+	position: absolute;
+	top: 20px;
+  }
+
+
+  @media screen and (min-width: 800px){
+.container{
+		display: grid;
+		grid-template-columns: 2fr 5fr 2fr;
+		grid-template-rows: auto;
+		grid-gap: 15px;
+}
+.container > div:first-of-type{
+	grid-column: 2 / 1;
+	grid-row: 1 / 1;
+	background-color: #d4cf72;
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-image{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto;
+	vertical-align: bottom;
+
+}
+
+
+.images1{
+	grid-column: 2 / 1;
+	grid-row: 1 / 2;
+}
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+	.gif-container {
+	  display: none; /* Hide the container with the GIF */
+	}
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+	/* Add styles for non-reduced motion users */
+	.gif-container {
+
+
+	}
+  }
